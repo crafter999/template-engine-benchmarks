@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= it.title %></title>
+</head>
+<body>
+    <header>
+        <h1><%= it.title %></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <% it.menu.forEach(function(item) { %>
+                <li><a href="<%= item.url %>"><%= item.name %></a></li>
+            <% }); %>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2><%= it.sectionTitle %></h2>
+            <% if (it.articles.length) { %>
+                <% it.articles.forEach(function(article) { %>
+                    <article>
+                        <h3><%= article.title %></h3>
+                        <p><%= article.content %></p>
+                    </article>
+                <% }); %>
+            <% } else { %>
+                <p>No articles available.</p>
+            <% } %>
+        </section>
+
+        <aside>
+            <%~ include("@partial",it) %>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; <% it.currentYear %> My Website</p>
+    </footer>
+</body>
+</html>

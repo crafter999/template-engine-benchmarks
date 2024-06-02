@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+    <header>
+        <h1><%= title %></h1>
+    </header>
+
+    <nav>
+        <ul>
+            <% menu.forEach(function(item) { %>
+                <li><a href="<%= item.url %>"><%= item.name %></a></li>
+            <% }); %>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2><%= sectionTitle %></h2>
+            <% if (articles.length) { %>
+                <% articles.forEach(function(article) { %>
+                    <article>
+                        <h3><%= article.title %></h3>
+                        <p><%= article.content %></p>
+                    </article>
+                <% }); %>
+            <% } else { %>
+                <p>No articles available.</p>
+            <% } %>
+        </section>
+
+        <aside>
+            <h2>About Me</h2>
+            <p><%= aboutMe %></p>
+            <h2>Links</h2>
+            <ul>
+                <% links.forEach(function(link) { %>
+                    <li><a href="<%= link.url %>"><%= link.name %></a></li>
+                <% }); %>
+            </ul>
+    </main>
+
+    <footer>
+        <p>&copy; <%= currentYear() %> My Website</p>
+    </footer>
+</body>
+</html>

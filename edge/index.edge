@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ title }}</title>
+  </head>
+  <body>
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+    <nav>
+      <ul>
+        @each(item in menu)
+        <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+        @endeach
+      </ul>
+    </nav>
+    <main>
+      <section>
+        <h2>{{ sectionTitle }}</h2>
+        @if(articles.length > 0) 
+        @each(article in articles)
+        <article>
+          <h3>{{ article.title }}</h3>
+          <p>{{ article.content }}</p>
+        </article>
+        @endeach
+        @else
+        <p>No articles available.</p>
+        @endif
+      </section>
+      <aside>
+        <h2>About Me</h2>
+        <p>{{ aboutMe }}</p>
+        <h2>Links</h2>
+        <ul>
+          @each(link in links)
+          <li><a href="{{ link.url }}">{{ link.name }}</a></li>
+          @endeach
+        </ul>
+      </aside>
+    </main>
+    <footer>
+      <p>&copy; {{ currentYear }} My Website</p>
+    </footer>
+  </body>
+</html>

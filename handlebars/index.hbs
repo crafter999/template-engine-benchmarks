@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+    <header>
+        <h1>{{title}}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            {{#each menu}}
+                <li><a href="{{url}}">{{name}}</a></li>
+            {{/each}}
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>{{sectionTitle}}</h2>
+            {{#if articles.length}}
+                {{#each articles}}
+                    <article>
+                        <h3>{{this.title}}</h3>
+                        <p>{{this.content}}</p>
+                    </article>
+                {{/each}}
+            {{else}}
+                <p>No articles available.</p>
+            {{/if}}
+        </section>
+
+        <aside>
+            {{> sidebar }}
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; {{currentYear}} My Website</p>
+    </footer>
+</body>
+</html>

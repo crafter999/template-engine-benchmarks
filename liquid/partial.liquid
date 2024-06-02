@@ -1,0 +1,10 @@
+  <div>
+    <h2>About Me</h2>
+    <p>{aboutMe}</p>
+    <h2>Links</h2>
+    <ul>
+      {links.map((link, index) => (
+        <li key={index}><a href={link.url}>{link.name}</a></li>
+      ))}
+    </ul>
+  </div>
