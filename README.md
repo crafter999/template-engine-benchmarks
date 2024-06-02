@@ -15,14 +15,14 @@ Simple performance testing of 1000 iterations of each template engine.
 
 
 # Results (Lower is better)
-| Engine     | Result |
-|------------|--------|
-| ETA.ja     | 20ms   |
-| EJS        | 68ms   |
-| Edge.js    | 118ms  |
-| Liquid.j   | 153ms  |
-| Nunjuck    | 175ms  |
-| Handlebars | 390ms  |
+| Engine     | Result | Snyk Score |
+|------------|--------|------------|
+| ETA.ja     | 20ms   |   92/100   |
+| EJS        | 68ms   |   94/100   |
+| Edge.js    | 118ms  |   74/100   |
+| Liquid.js  | 153ms  |   86/100   |
+| Nunjucks   | 175ms  |   80/100   |
+| Handlebars | 390ms  |   86/100   |
 
 # How to run
 ```
