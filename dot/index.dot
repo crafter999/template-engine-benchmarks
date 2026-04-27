@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{=it.title}}</title>
+</head>
+<body>
+    <header>
+        <h1>{{=it.title}}</h1>
+    </header>
+
+    <nav>
+        <ul>
+            {{ for(var i = 0; i < it.menu.length; i++) { }}
+                <li><a href="{{=it.menu[i].url}}">{{=it.menu[i].name}}</a></li>
+            {{ } }}
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>{{=it.sectionTitle}}</h2>
+            {{ if(it.articles.length) { }}
+                {{ for(var j = 0; j < it.articles.length; j++) { }}
+                    <article>
+                        <h3>{{=it.articles[j].title}}</h3>
+                        <p>{{=it.articles[j].content}}</p>
+                    </article>
+                {{ } }}
+            {{ } else { }}
+                <p>No articles available.</p>
+            {{ } }}
+        </section>
+
+        <aside>
+            <h2>About Me</h2>
+            <p>{{=it.aboutMe}}</p>
+            <h2>Links</h2>
+            <ul>
+                {{ for(var k = 0; k < it.links.length; k++) { }}
+                    <li><a href="{{=it.links[k].url}}">{{=it.links[k].name}}</a></li>
+                {{ } }}
+            </ul>
+    </main>
+
+    <footer>
+        <p>&copy; {{=it.currentYear()}} My Website</p>
+    </footer>
+</body>
+</html>

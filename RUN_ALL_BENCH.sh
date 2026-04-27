@@ -19,3 +19,6 @@ echo ""
 echo "Running Nunjucks..."
 node ./dist/nunjucks/main.js
 echo ""
+echo "Running Dot.js..."
+node ./dist/dot/main.js
+echo ""

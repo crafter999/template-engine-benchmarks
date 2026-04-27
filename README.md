@@ -12,12 +12,14 @@ Simple performance testing of 1000 iterations of each template engine.
 - Nunjucks
 - EJS
 - Edge.js
+- Dot.js
 
 
 # Results (Lower is better)
 | Engine     | Result | Snyk Score |
 |------------|--------|------------|
-| ETA.ja     | 20ms   |   92/100   |
+| Dot.js     | 2.3ms  |   74/100   |
+| ETA.js     | 20ms   |   92/100   |
 | EJS        | 68ms   |   94/100   |
 | Edge.js    | 118ms  |   74/100   |
 | Liquid.js  | 153ms  |   86/100   |
