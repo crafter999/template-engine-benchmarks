@@ -1,4 +1,4 @@
-# Node.js template engine benchmarks (2024)
+# Node.js template engine benchmarks (2026)
 Template engines are widely used in JavaScript to render HTML views by inserting dynamic data into templates. The performance of these engines can vary significantly based on the complexity of the template and the data being processed. This repository aims to provide a fair comparison of the performance of popular JavaScript template engines.
 
 
@@ -18,13 +18,13 @@ Simple performance testing of 1000 iterations of each template engine.
 # Results (Lower is better)
 | Engine     | Result | Snyk Score |
 |------------|--------|------------|
-| Dot.js     | 2.3ms  |   74/100   |
-| ETA.js     | 20ms   |   92/100   |
-| EJS        | 68ms   |   94/100   |
-| Edge.js    | 118ms  |   74/100   |
-| Liquid.js  | 153ms  |   86/100   |
-| Nunjucks   | 175ms  |   80/100   |
-| Handlebars | 390ms  |   86/100   |
+| Dot.js     | 2ms    |   74/100   |
+| ETA.js     | 16ms   |   89/100   |
+| EJS        | 71ms   |   83/100   |
+| Edge.js    | 123ms  |   84/100   |
+| Liquid.js  | 176ms  |   88/100   |
+| Nunjucks   | 190ms  |   79/100   |
+| Handlebars | 325ms  |   95/100   |
 
 # How to run
 ```
